@@ -1,0 +1,115 @@
+<?php echo "XAMPP funcionando!"; ?>
+sistema-hospital/
+│
+├── config/
+│   ├── database.php          # conexão PDO com o banco
+│   └── config.php            # constantes gerais (URL base, etc)
+│
+├── public/                   # document root do servidor
+│   ├── index.php             # front controller / router simples
+│   ├── login.php
+│   ├── logout.php
+│   ├── dashboard.php
+│   ├── assets/
+│   │   ├── css/
+│   │   ├── js/
+│   │   └── img/
+│   │
+│   ├── pacientes/
+│   │   ├── listar.php
+│   │   ├── cadastrar.php
+│   │   ├── editar.php
+│   │   ├── ficha.php         # visualizar ficha completa
+│   │   └── excluir.php
+│   │
+│   ├── medicos/
+│   │   ├── listar.php
+│   │   ├── cadastrar.php
+│   │   ├── editar.php
+│   │   └── excluir.php
+│   │
+│   ├── consultas/
+│   │   ├── listar.php
+│   │   ├── agendar.php
+│   │   ├── editar.php
+│   │   └── cancelar.php
+│   │
+│   ├── atendimento/
+│   │   └── atender.php       # tela do médico: sintomas, diagnóstico, prescrição
+│   │
+│   ├── medicamentos/
+│   │   ├── listar.php
+│   │   ├── cadastrar.php
+│   │   ├── entrada.php
+│   │   ├── saida.php
+│   │   └── editar.php
+│   │
+│   ├── internacoes/
+│   │   ├── listar.php
+│   │   ├── internar.php
+│   │   └── dar_alta.php
+│   │
+│   ├── leitos/
+│   │   ├── listar.php
+│   │   ├── cadastrar.php
+│   │   └── status.php        # trocar status (livre/ocupado/manutenção)
+│   │
+│   ├── financeiro/
+│   │   ├── listar.php
+│   │   ├── registrar.php
+│   │   └── quitar.php
+│   │
+│   ├── relatorios/
+│   │   ├── pacientes.php
+│   │   ├── consultas_dia.php
+│   │   ├── consultas_mes.php
+│   │   ├── medicos.php
+│   │   ├── internacoes.php
+│   │   └── estoque_baixo.php
+│   │
+│   ├── perfil/
+│   │   └── editar.php        # senha, foto, telefone
+│   │
+│   └── pesquisa/
+│       └── global.php
+│
+├── app/
+│   ├── Models/
+│   │   ├── Usuario.php
+│   │   ├── Paciente.php
+│   │   ├── Medico.php
+│   │   ├── Especialidade.php
+│   │   ├── Consulta.php
+│   │   ├── Atendimento.php
+│   │   ├── Medicamento.php
+│   │   ├── Estoque.php
+│   │   ├── Internacao.php
+│   │   ├── Quarto.php
+│   │   ├── Leito.php
+│   │   └── Financeiro.php
+│   │
+│   ├── Controllers/
+│   │   ├── AuthController.php
+│   │   ├── PacienteController.php
+│   │   ├── MedicoController.php
+│   │   ├── ConsultaController.php
+│   │   ├── AtendimentoController.php
+│   │   ├── MedicamentoController.php
+│   │   ├── InternacaoController.php
+│   │   ├── LeitoController.php
+│   │   ├── FinanceiroController.php
+│   │   └── RelatorioController.php
+│   │
+│   ├── Middlewares/
+│   │   ├── AuthMiddleware.php       # verifica se está logado
+│   │   └── PermissaoMiddleware.php  # verifica o perfil (admin/médico/recepção)
+│   │
+│   └── Views/
+│       ├── layout/
+│       │   ├── header.php
+│       │   ├── sidebar.php
+│       │   └── footer.php
+│       └── ... (uma view por tela, incluída pelos arquivos em public/)
+│
+└── database/
+    └── hospital.sql          # script de criação das tabelas
