@@ -7,18 +7,18 @@
         </button>
     </header>
 
-    <div class="sidebar-contant">
+    <div class="sidebar-content">
         <!-- Search form -->
         <form action="#" class="search-form">
             <span class="material-symbols-rounded"> search </span>
-            <input type="search" placehoder="Search..." required> 
+            <input type="search" placeholder="Search..." required> 
         </form>
         
 
         <!-- Menu list -->
         <ul class="menu-list">
             <li class="menu-item">
-                <a href="#" class="menu-link">
+                <a href="#" class="menu-link" active>
                     <span class="material-symbols-rounded">dashboard</span>
                     <span class="menu-labal">Dashboard</span>
                 </a>
