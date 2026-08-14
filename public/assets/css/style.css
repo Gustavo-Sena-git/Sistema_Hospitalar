@@ -276,3 +276,39 @@ body.dark-theme .theme-toggle-track .theme-toggle-indicator{
         width: 270px;
     }
 }
+
+/* ------Dashboard------ */
+
+body {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+}
+
+.dashboard {
+    flex: 1;
+    padding: 30px;
+    min-width: 0;
+}
+
+.base-card {
+    border: 3px solid red;
+    margin: 2%;
+}
+
+.consultations {
+    border: 3px solid rgb(51, 255, 0) !important;
+    margin: 2%;
+}
+
+.table-base th,
+.table-base td {
+    border: 1px solid #0e38f7;
+    padding: 12px;
+    text-align: left;
+}
+
+.leitos{
+    border: 3px solid rgb(238, 255, 0) !important;
+    margin: 2%;
+}

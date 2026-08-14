@@ -47,5 +47,31 @@ if (themeToggleBtn) {
         updateThemeIcon();
     });
 }
+//---dashboard---
+
+let numeroPacientes = 42;
+
+document.getElementById("pacientes").textContent = numeroPacientes + " cadastrados";
+
+let numeroConsultas = 15;
+
+document.getElementById("consultas").textContent = numeroConsultas + " agendadas";
+
+let numeroMedicos = 10;
+
+document.getElementById("medicos").textContent = numeroMedicos + " cadastrados";
+
+let numeroInternacoes = 5;
+
+document.getElementById("internacoes").textContent = numeroInternacoes + " em andamento";
+
+//Codigo das tabelas de consultas
 
 
+
+
+//Codigo ocupação de leitos
+
+let numeroLeitos = 25;
+
+document.getElementById("beds").textContent = numeroLeitos + "/40 leitos ocupados"
