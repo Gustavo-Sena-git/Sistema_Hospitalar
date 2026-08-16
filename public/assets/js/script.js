@@ -75,3 +75,4 @@ document.getElementById("internacoes").textContent = numeroInternacoes + " em an
 let numeroLeitos = 25;
 
 document.getElementById("beds").textContent = numeroLeitos + "/40 leitos ocupados"
+

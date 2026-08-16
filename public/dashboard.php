@@ -56,15 +56,48 @@ include '../app/Views/layout/sidebar.php';
         </div>
         <div class="leitos">
             <span>Ocupação de leitos</span>
+
+            <div class="chart-container">
+                <canvas id="leitosChart"></canvas>
+            </div>
+
             <p id="beds"></p>
         </div>
     </div>
     <div class="fim">
         <div class="consultas-realizadas">
             <span>Consultas realizadas</span>
+
+            <div class="chart-container">
+                <canvas id="consultasChart"></canvas>
+            </div>
         </div>
         <div class="atividade">
             <span>Atividade recente</span>
+
+            <div class="atividade-item">
+                <span class="material-symbols-rounded">person_add</span>
+                <div>
+                    <strong>Novo paciente cadastrado</strong>
+                    <small>Há 10 minutos</small>
+                </div>
+            </div>
+
+            <div class="atividade-item">
+                <span class="material-symbols-rounded">event_available</span>
+                <div>
+                    <strong>Consulta realizada</strong>
+                    <small>Há 30 minutos</small>
+                </div>
+            </div>
+
+            <div class="atividade-item">
+                <span class="material-symbols-rounded">local_hospital</span>
+                <div>
+                    <strong>Nova internação</strong>
+                    <small>Há 1 hora</small>
+                </div>
+            </div>
         </div>
     </div>
 </main>
@@ -72,3 +105,43 @@ include '../app/Views/layout/sidebar.php';
 <?php
 include '../app/Views/layout/footer.php';
 ?>
+
+<script>
+console.log("Script do gráfico carregou");
+
+console.log("Chart:", typeof Chart);
+
+const leitos = document.getElementById("leitosChart");
+
+const consultas = document.getElementById("consultasChart");
+
+console.log("Canvas leitos:", leitos);
+console.log("Canvas consultas:", consultas);
+
+
+new Chart(leitos, {
+    type: "doughnut",
+
+    data: {
+        labels: ["Ocupados", "Disponíveis"],
+
+        datasets: [{
+            data: [32, 8]
+        }]
+    }
+});
+
+
+new Chart(consultas, {
+    type: "line",
+
+    data: {
+        labels: ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun"],
+
+        datasets: [{
+            label: "Consultas",
+            data: [45, 52, 48, 65, 72, 60]
+        }]
+    }
+});
+</script>

@@ -6,5 +6,6 @@
     <title>Sistema Hospitalar</title>
     <link rel="stylesheet" href="<?= BASE_PUBLIC ?>/assets/css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
